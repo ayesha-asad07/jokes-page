@@ -1,29 +1,48 @@
-body{
+body {
     font-family: Roboto, sans;
-    background-color:rgb(243, 175, 228);
-
+    background: linear-gradient(to right, rgb(241, 198, 205), rgb(216, 216, 250), rgb(245, 245, 204));
+    animation: backgroundAnimation 6s infinite alternate ease-in-out;
 }
-h1.heading{
+
+@keyframes backgroundAnimation {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+h1.heading {
     font-size: 50px;
-    color:rgb(102, 32, 81);
+    color: rgb(102, 32, 81);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
 }
-#line{
-    color:rgb(102, 32, 81);
-    
-}
-#joke--text {
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#line {
+    color: rgb(102, 32, 81);
+    display: block;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#joke--text {
     font-family: 'Times New Roman', Times, serif;
-    font-size:35px;
-    color:rgb(102, 32, 81);
-    max-width:50%;
-    margin:auto;
-    border: 2px solid rgb(247, 102, 203);
+    font-size: 35px;
+    color: rgb(102, 32, 81);
+    max-width: 50%;
+    margin: auto;
+    border: 2px solid rgb(207, 81, 169);
     border-radius: 5px;
     padding: 60px 30px;
     justify-content: center;
-    background-color:rgb(241, 193, 238);
+    background-color: rgb(241, 193, 238);
+    animation: popIn 1s ease-in-out;
+}
 
-
-  }
-  
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
