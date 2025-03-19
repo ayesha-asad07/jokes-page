@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
+    <script>
+        console.log(Object.values(JokeAPI));
+
+        // JokeAPI.getJokes().then(r => console.log(r.body))
+        JokeAPI.getJokes({
+            jokeType: "single"
+        })
+        .then((r) => r.json())
+        .then((data) => {
+        updateUI(data);
+        });   
+
+        // To update the joke on the UI
+        function updateUI(jokeData) {
+          const $ = (id) => document.getElementById(id);
+
+        $("joke--text").innerHTML = jokeData.joke;
+        }
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="heading">Joke API</h1>
+    <h4 id="line"><i>Have some Laugh out here!</i></h4>
+    <div id="joke-container">
+            <h2 id="joke--text"></h2>
+    </div>
+    
+</body>
+</html>

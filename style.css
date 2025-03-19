@@ -1,0 +1,29 @@
+body{
+    font-family: Roboto, sans;
+    background-color:rgb(243, 175, 228);
+
+}
+h1.heading{
+    font-size: 50px;
+    color:rgb(102, 32, 81);
+}
+#line{
+    color:rgb(102, 32, 81);
+    
+}
+#joke--text {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size:35px;
+    color:rgb(102, 32, 81);
+    max-width:50%;
+    margin:auto;
+    border: 2px solid rgb(247, 102, 203);
+    border-radius: 5px;
+    padding: 60px 30px;
+    justify-content: center;
+    background-color:rgb(241, 193, 238);
+
+
+  }
+  
